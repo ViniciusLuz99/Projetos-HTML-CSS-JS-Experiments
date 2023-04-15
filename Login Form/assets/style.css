@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+/*
+   Arquivo CSS Mobile First padrão
+   ---------------------------------
+/*Root*/
+:root {
+  /* Cores */
+  --primary-color: #87cefa;
+  --secondary-color: #4169e1;
+  --tertiary-color: #e6e6e6;
+  --quaternary-color: #333333;
+
+  --white-1: #f8f8f8; /*off-white claro */
+  --white-2: #f2f2f2; /*off-white claro */
+  --white-3: #e5e5e5; /*off-white médio */
+  --white-4: #d8d8d8; /*off-white escuro */
+  --black-1: #282828; /*off-black muito escuro */
+  --black-2: #333333; /*off-black muito escuro */
+  --black-3: #4a4a4a; /*off-black escuro */
+  --black-4: #5e5e5e; /*off-black médio */
+  --black-5: #777777; /*off-black claro */
+
+  /* Fontes */
+  --fonte-titulo: "Open Sans", sans-serif;
+  --fonte-corpo: "Open Sans", sans-serif;
+  --fonte-mono: "Fira Code", monospace;
+
+  /*sombras*/
+  --shadow-box-hover: 0px 0px 11px rgba(0, 0, 0, 0.432);
+  --shadow-P: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-M: 0 2px 4px rgba(0, 0, 0, 0.12);
+  --shadow-G: 0 4px 8px rgba(0, 0, 0, 0.16);
+  --shadow-GG: 0 4px 10px rgba(0, 0, 0, 0.24);
+  --shadow-TESTE: 0 8px 6px rgba(241, 16, 16, 0.877);
+  --text-shadow-P: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  --text-shadow-M: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  --text-shadow-G: 2px 3px 6px rgba(0, 0, 0, 0.3);
+  --text-shadow-GG: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+/* Reset CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+/*
+Estilos gerais
+-------------
+Esses estilos são aplicados a todos os tamanhos de tela, incluindo dispositivos móveis
+e desktops. Eles fornecem um estilo básico para elementos HTML, como fontes, cores e
+margens/padding.
+*/
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 16px;
+  color: var(--white-1);
+  background-color: var(--black-1);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: var(--text-shadow-M);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-shadow: var(--text-shadow-P);
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  text-shadow: var(--text-shadow-P);
+}
+
+/*Layout*/
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+/*
+Estilos da pagina
+*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/**/
+.login-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-3);
+  width: 90%;
+  max-width: 900px;
+  padding: 40px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  margin-top: 30%;
+  animation: rgb-border 10s infinite;
+}
+
+@keyframes rgb-border {
+  0% {
+    box-shadow: 0 0 10px var(--secondary-color);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--primary-color);
+  }
+  80% {
+    box-shadow: 0 0 10px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--secondary-color);
+  }
+  0%,
+  100% {
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+  }
+  50% {
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+  }
+}
+
+.login-text h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px;
+  width: 100%;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.login-form {
+  margin: 0 auto;
+}
+
+.login-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: var(--white-3);
+  font-size: 1.2rem;
+}
+
+.login-form label a {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  color: var(--white-4);
+}
+.login-form fieldset input {
+  width: 100%;
+  min-width: 200px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-form fieldset input:focus,
+.login-form fieldset input:focus:hover {
+  outline: none;
+  border-color: var(--primary-color);
+  transition: all 0.1s ease-in-out;
+}
+/* .login-form fieldset input:focus label{
+  back
+} */
+
+.login-form fieldset input:hover {
+  border-color: var(--black-5);
+}
+.login-form #submit {
+  color: var(--white-2);
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 35px;
+  margin: 0 auto;
+  border: transparent;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.login-form #submit:hover{
+  color: var(--black-1);
+  background-color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+}
+.login-with {
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 20px;
+}
+.login-with-text p {
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2px;
+}
+.login-with-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 1rem;
+}
+.login-with-links a {
+  color: var(--white-1);
+  width: 200px;
+  min-width: 200px;
+  padding: 10px 4px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #282828;
+  transition: all 0.3s ease-in-out;
+}
+.login-google:hover , .login-facebook:hover{
+  color: var(--black-1);
+  background-color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.login-signUp,
+.login-signUp a {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: var(--white-4);
+}
+.login-signUp a {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+/*Media Queries Desktop, tablets, Tvs...*/
+/* Estilos para tablets*/
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Estilos para desktops */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Estilos para widescreen */
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+/* Estilos para telas ultrawide */
+@media only screen and (min-width: 2560px) {
+  body {
+    font-size: 26px;
+  }
+}
