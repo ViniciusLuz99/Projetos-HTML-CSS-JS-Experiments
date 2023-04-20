@@ -6,6 +6,6 @@
 - [Veja o resultado aqui](https://viniciusluz99.github.io/Projetos-HTML-CSS-JS-Experiments/Login%20Form/index.html)
 - Descrição: Um formulário de login simples.
 
-### Registration Form
+### Game Menu - Neon thunder 
 - [Veja o resultado aqui](https://viniciusluz99.github.io/Projetos-HTML-CSS-JS-Experiments/GameMenu%20-%20Neon%20Thunder/index.html)
 - Descrição: Este projeto consiste em um menu para um jogo fictício chamado Neon Thunder.
